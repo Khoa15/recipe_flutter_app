@@ -22,9 +22,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bottom Navigation'),
-      ),
       body: Stack(
         children: [
           Column(
@@ -56,7 +53,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
-        
+
         showSelectedLabels: false,
         showUnselectedLabels: false,
       ),

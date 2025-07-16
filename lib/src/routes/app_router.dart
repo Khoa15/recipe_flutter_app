@@ -1,5 +1,8 @@
 import 'package:flutter_recipe_app/src/screens/home/home_screen.dart';
 import 'package:flutter_recipe_app/src/screens/navigation/bottom_navigation.dart';
+import 'package:flutter_recipe_app/src/screens/profile/profile_screen.dart';
+import 'package:flutter_recipe_app/src/screens/recipes/save_recipes_screen.dart';
+import 'package:flutter_recipe_app/src/screens/search/search_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -22,7 +25,7 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: '/search',
-                builder: (context, state) => const HomeScreen(),
+                builder: (context, state) => const SearchScreen(),
               ),
             ],
           ),
@@ -30,7 +33,7 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: '/recipes',
-                builder: (context, state) => const HomeScreen(),
+                builder: (context, state) => const SaveRecipesScreen(),
               ),
             ],
           ),
@@ -38,7 +41,7 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: '/profile',
-                builder: (context, state) => const HomeScreen(),
+                builder: (context, state) => const ProfileScreen(),
               ),
             ],
           ),
