@@ -7,7 +7,8 @@ class AppRouter {
     initialLocation: '/',
     routes: [
       StatefulShellRoute.indexedStack(
-        builder: (context, state, navigationShell) => BottomNavigation(child: navigationShell),
+        builder: (context, state, navigationShell) =>
+            BottomNavigation(child: navigationShell),
         branches: [
           StatefulShellBranch(
             routes: [
@@ -15,14 +16,26 @@ class AppRouter {
                 path: '/',
                 builder: (context, state) => const HomeScreen(),
               ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
               GoRoute(
                 path: '/search',
                 builder: (context, state) => const HomeScreen(),
               ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
               GoRoute(
                 path: '/recipes',
                 builder: (context, state) => const HomeScreen(),
               ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
               GoRoute(
                 path: '/profile',
                 builder: (context, state) => const HomeScreen(),
