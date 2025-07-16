@@ -14,12 +14,6 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('Welcome to the Home Screen!'),
-            ElevatedButton(
-              onPressed: () {
-                // Navigate to another screen or perform an action
-              },
-              child: const Text('Go to Recipes'),
-            ),
           ],
         ),
       ),
