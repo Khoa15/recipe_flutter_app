@@ -13,9 +13,24 @@ class FoodCategory extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          SizedBox(height: 10),
-          ...items.map((item) => item),
+          Text(
+            title,
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          ConstrainedBox(
+            constraints: BoxConstraints(maxHeight: 200),
+            child: ListView(
+              // This is line 15
+              scrollDirection: Axis.horizontal,
+              children: [
+                SizedBox(height: 10),
+                ...(items).map(
+                  // This is where the null check operator might be implicitly used
+                  (item) => item,
+                ), // Use null-aware operator with empty list fallback
+              ],
+            ),
+          ),
         ],
       ),
     );

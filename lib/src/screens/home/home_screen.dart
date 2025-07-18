@@ -19,71 +19,91 @@ class HomeScreen extends StatelessWidget {
         actions: [IconButton(icon: Icon(Icons.filter_list), onPressed: () {})],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            FoodCategory(
-              title: 'TP. Hồ Chí Minh',
-              items: [
-                FoodItem(
-                  imageUrl: 'https://placehold.co/150',
-                  name: 'It\'s that simple',
-                  price: 'Cảch ăn trong vòng mất cảch ăn',
-                  user: 'Đinh Trọng Phước',
-                ),
-                FoodItem(
-                  imageUrl: 'https://placehold.co/150',
-                  name: 'It\'s that simple',
-                  price: 'Cảch ăn trong vòng mất cảch ăn',
-                  user: 'Đinh Trọng Phước',
-                ),
-              ],
-            ),
-            FoodCategory(
-              title: 'Đánh giá',
-              items: [
-                FoodItem(
-                  imageUrl: 'https://placehold.co/150',
-                  name: 'Trứng chiên',
-                  price: '20 phút',
-                  user: 'Trần Đinh Trọng',
-                ),
-                FoodItem(
-                  imageUrl: 'https://placehold.co/150',
-                  name: 'Trứng chiên',
-                  price: '20 phút',
-                  user: 'Trần Đinh Trọng',
-                ),
-              ],
-            ),
-            FoodCategory(
-              title: 'Cơng thức ăn ngày',
-              items: [
-                FoodItem(
-                  imageUrl: 'https://placehold.co/150',
-                  name: 'Trứng chiên',
-                  price: '',
-                  user: 'Nguyễn Đinh Trọng',
-                ),
-                FoodItem(
-                  imageUrl: 'https://placehold.co/150',
-                  name: 'Trứng chiên',
-                  price: '',
-                  user: 'Nguyễn Đinh Trọng',
-                ),
-              ],
-            ),
-            FoodCategory(
-              title: 'Nguyên liệu',
-              items: [
-                FoodItem(
-                  imageUrl: 'https://placehold.co/150',
-                  name: 'Đánh giá 1',
-                  price: '',
-                  user: 'Đinh Trọng',
-                ),
-              ],
-            ),
-          ],
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight:
+                MediaQuery.of(context).size.height -
+                kToolbarHeight -
+                kBottomNavigationBarHeight,
+          ),
+          child: Column(
+            children: [
+              FoodCategory(
+                title: 'TP. Hồ Chí Minh',
+                items: [
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'It\'s that simple',
+                    price: 'Cảch ăn trong vòng mất cảch ăn',
+                    user: 'Đinh Trọng Phước',
+                  ),
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'It\'s that simple',
+                    price: 'Cảch ăn trong vòng mất cảch ăn',
+                    user: 'Đinh Trọng Phước',
+                  ),
+                ],
+              ),
+              FoodCategory(
+                title: 'Đánh giá',
+                items: [
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'Trứng chiên',
+                    price: '20 phút',
+                    user: 'Trần Đinh Trọng',
+                  ),
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'Trứng chiên',
+                    price: '20 phút',
+                    user: 'Trần Đinh Trọng',
+                  ),
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'Trứng chiên',
+                    price: '20 phút',
+                    user: 'Trần Đinh Trọng',
+                  ),
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'Trứng chiên',
+                    price: '20 phút',
+                    user: 'Trần Đinh Trọng',
+                  ),
+                ],
+              ),
+              FoodCategory(
+                title: 'Cơng thức ăn ngày',
+                items: [
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'Trứng chiên',
+                    price: '',
+                    user: 'Nguyễn Đinh Trọng',
+                  ),
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'Trứng chiên',
+                    price: '',
+                    user: 'Nguyễn Đinh Trọng',
+                  ),
+                ],
+              ),
+              FoodCategory(
+                title: 'Nguyên liệu',
+                items: [
+                  FoodItem(
+                    imageUrl: 'https://placehold.co/150',
+                    name: 'Đánh giá 1',
+                    price: '',
+                    user: 'Đinh Trọng',
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
