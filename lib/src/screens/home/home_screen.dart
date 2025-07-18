@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_recipe_app/src/screens/home/widget/food_category.dart';
 import 'package:flutter_recipe_app/src/screens/home/widget/food_item.dart';
 import 'package:flutter_recipe_app/src/utils/common/btn_category.dart';
+import 'package:flutter_recipe_app/src/utils/common/profile_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -78,9 +79,139 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(maxHeight: 213),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
-              FoodCategory(title: 'Nguyên liệu', items: []),
+
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Công thức gần đây',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      TextButton(onPressed: () {}, child: Text('Xem tất cả')),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(maxHeight: 35),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(maxHeight: 213),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                          ProfileCard(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Nguyên liệu',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      TextButton(onPressed: () {}, child: Text('Xem tất cả')),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(maxHeight: 35),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(maxHeight: 35),
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                          ButtonCategory(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

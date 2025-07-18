@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FoodItem extends StatelessWidget {
-  final String imageUrl = 'https://placehold.co/150';
+  final String imageUrl = 'https://fpoimg.com/206x140?text=Preview&bg_color=e6e6e6&text_color=8F8F8F';
   final String name = 'Cách chiên trứng một cách cung phu';
   final String user = 'Đinh Trọng Phước';
   const FoodItem({super.key});
