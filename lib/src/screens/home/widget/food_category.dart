@@ -18,16 +18,14 @@ class FoodCategory extends StatelessWidget {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           ConstrainedBox(
-            constraints: BoxConstraints(maxHeight: 200),
+            constraints: BoxConstraints(maxHeight: 252),
             child: ListView(
-              // This is line 15
               scrollDirection: Axis.horizontal,
               children: [
-                SizedBox(height: 10),
+                // SizedBox(height: 30),
                 ...(items).map(
-                  // This is where the null check operator might be implicitly used
                   (item) => item,
-                ), // Use null-aware operator with empty list fallback
+                ),
               ],
             ),
           ),
