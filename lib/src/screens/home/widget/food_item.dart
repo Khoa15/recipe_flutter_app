@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
 
 class FoodItem extends StatelessWidget {
-  final String imageUrl;
-  final String name;
-  final String price;
-  final String user;
-
-  FoodItem({
-    required this.imageUrl,
-    required this.name,
-    required this.price,
-    required this.user,
-  });
+  final String imageUrl = 'https://placehold.co/150';
+  final String name = 'Cách chiên trứng một cách cung phu';
+  final String user = 'Đinh Trọng Phước';
+  const FoodItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      elevation: 1,
       child: SizedBox(
         width: 206,
         height: 252,
@@ -74,22 +67,6 @@ class FoodItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                // if (true)
-                //   Positioned.fill(
-                //     child: Center(
-                //       child: Container(
-                //         decoration: BoxDecoration(
-                //           color: const Color.fromARGB(104, 0, 0, 0),
-                //           shape: BoxShape.circle,
-                //         ),
-                //         child: const Icon(
-                //           Icons.play_arrow,
-                //           color: Colors.white,
-                //           size: 60,
-                //         ),
-                //       ),
-                //     ),
-                //   ),
               ],
             ),
             Expanded(
@@ -106,12 +83,12 @@ class FoodItem extends StatelessWidget {
                           "1 tiếng 20 phút",
                           style: TextStyle(
                             fontSize: 11,
-                            color: Colors.grey[600],
+                            color: Color.fromARGB(255, 0, 67, 179),
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                         Icon(
                           Icons.favorite_border,
-                          color: Colors.grey[600],
                           size: 16,
                         ),
                       ],
@@ -122,8 +99,9 @@ class FoodItem extends StatelessWidget {
                       name,
                       style: const TextStyle(
                         fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 24, 27, 24),
+                        fontFamily: 'inter',
                       ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
@@ -153,8 +131,8 @@ class FoodItem extends StatelessWidget {
                           "Đinh Trọng Phúc",
                           style: TextStyle(
                             fontSize: 12,
-                            color: Colors.grey[700],
-                            fontWeight: FontWeight.w500,
+                            color: Color.fromARGB(255, 206, 167, 0),
+                            fontWeight: FontWeight.w600,
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
