@@ -6,14 +6,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('Welcome to the Home Screen!'),
-          ],
+      appBar: AppBar(
+        title: TextField(
+          decoration: InputDecoration(
+            hintText: 'Tìm kiếm sản phẩm',
+            border: InputBorder.none,
+            prefixIcon: Icon(Icons.search),
+          ),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.filter_list),
+            onPressed: () {},
+          ),
+        ],
       ),
+      body: Column(
+      )
     );
   }
 }
