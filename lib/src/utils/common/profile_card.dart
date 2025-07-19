@@ -12,6 +12,7 @@ class ProfileCard extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Positioned(
+            height: 155,
             top: 50,
             left: 0,
             right: 0,
@@ -20,6 +21,7 @@ class ProfileCard extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
+              elevation: 0,
               child: Padding(
                 padding: const EdgeInsets.only(
                   top: 30,
@@ -41,7 +43,7 @@ class ProfileCard extends StatelessWidget {
                             color: Color.fromARGB(255, 115, 76, 16),
                           ),
                         ),
-                        SizedBox(height: 4),
+                        // SizedBox(height: 4),
                         Text(
                           'Tạo bởi',
                           style: TextStyle(
@@ -60,7 +62,6 @@ class ProfileCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
